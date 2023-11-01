@@ -1,0 +1,7 @@
+{
+  "name": "KinderJoy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

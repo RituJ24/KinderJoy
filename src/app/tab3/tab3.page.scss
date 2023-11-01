@@ -1,0 +1,19 @@
+ion-title{
+    font-size: 20pt;
+    font-family: 'Lucida Sans';
+    color: rgb(44, 3, 139);
+    font-weight: bold;
+}
+ion-item,
+ion-badge,
+ion-label{
+    size: 22pt;
+    font-size: 20pt;
+}
+ion-avatar{
+    width: 20%;
+    height: 30%;
+}
+ion-item,ion-badge{
+    background-color: red;
+}

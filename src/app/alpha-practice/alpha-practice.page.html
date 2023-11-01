@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-thumbnail slot="start"><img src="https://i.pinimg.com/564x/b3/41/67/b34167662b9bffaaa28c72422e53bc8b.jpg"></ion-thumbnail>
+    <ion-title>
+      Alphabets
+    </ion-title>
+    <ion-thumbnail slot="end">
+      <button routerLink="/tabs/tab1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj-SaZPK2wk3cyOhflAeaSSyYzAdunGDSMJw&usqp=CAU">
+      </button>
+    </ion-thumbnail>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">alphaPractice</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card class="content">
+    <ion-card-header>Identify Alphabet</ion-card-header>
+    <ion-card-content class="quiz">
+    <div *ngIf="!quizComplete">
+      <img [src]="currentQuestion.image" alt="Question Image"><br>
+  
+        <ion-radio-group [(ngModel)]="selectedAnswer">
+          <ion-item *ngFor="let option of currentQuestion.options">
+            <ion-radio [value]="option"></ion-radio>&nbsp;&nbsp;&nbsp;
+            <ion-label>{{ option }}</ion-label> 
+          </ion-item>
+        </ion-radio-group>
+      
+      <ion-button (click)="submit()">Submit</ion-button>
+    </div>
+  
+    <ion-card *ngIf="quizComplete">
+      <ion-card-header>
+        Quiz Complete!
+      </ion-card-header>
+      <ion-card-content>
+        <p>Your Score: {{ score }}/{{ questions.length }}</p>
+      </ion-card-content>
+      </ion-card>
+      <ion-button *ngIf="quizComplete" (click)="restartQuiz()">Restart</ion-button>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-button class="logo">
+      <a href="https://robowhale.com/html5/drawing-letters/">
+      <img src="https://m.media-amazon.com/images/I/61UlyCYoyPL.png"><br>
+      <ion-label>Let's Draw</ion-label></a>
+    </ion-button>
+  </ion-card>
+
+</ion-content>

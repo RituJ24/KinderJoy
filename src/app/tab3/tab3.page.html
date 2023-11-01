@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-thumbnail slot="start"><img src="https://i.pinimg.com/564x/b3/41/67/b34167662b9bffaaa28c72422e53bc8b.jpg"></ion-thumbnail>
+    <ion-title>
+      Leaderboard
+    </ion-title>
+    <ion-thumbnail slot="end">
+      <button routerLink="/tabs/home">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj-SaZPK2wk3cyOhflAeaSSyYzAdunGDSMJw&usqp=CAU">
+      </button>
+    </ion-thumbnail>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item *ngFor="let item of leaderboardData" color="warning">
+      <ion-avatar slot="start">
+        <img [src]="item.image" alt="User Avatar">
+      </ion-avatar>
+      <ion-label>{{ item.name }}</ion-label>
+      <ion-badge slot="end">{{ item.score }}</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>

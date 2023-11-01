@@ -1,0 +1,34 @@
+ion-title{
+    font-size: 20pt;
+    font-family: 'Lucida Sans';
+    color: rgb(44, 3, 139);
+    font-weight: bold;
+}
+  ion-avatar{
+    margin-top: 10px;
+    padding: 1%;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    margin-left: 74px;
+    border: 5px solid;
+    border-color: #1E4284;
+  }
+  
+  ion-toolbar{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1E4284;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  ion-title.name{
+    margin-left: 27%;
+    font-family: cursive;
+  }
+  ion-thumbnail.reward{
+   display: flex;
+  }
+  ion-item{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
